@@ -1,5 +1,5 @@
-## Interface: 50400
+## Interface: 60000
 ## Title: Hide Quest Tracker
-## Version: (v0.4)
+## Version: (v0.9)
 ## Notes: Addon to hide the quest tracker while in combat
 code.lua

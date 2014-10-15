@@ -2,13 +2,15 @@
 local frame, events = CreateFrame("Frame"), {};
 function events:PLAYER_REGEN_DISABLED(...)
  -- handle PLAYER_REGEN_DISABLED here
-	WatchFrame:Hide()
-        WatchFrame.Show = WatchFrame.Hide
+	--print(WatchFrame);
+--	WatchFrame:Hide()
+	ObjectiveTrackerFrame:Hide()
+        ObjectiveTrackerFrame.Show = ObjectiveTrackerFrame.Hide
 end
 function events:PLAYER_REGEN_ENABLED(...)
  -- handle PLAYER_REGEN_ENABLED here
-	WatchFrame.Show = nil
-        WatchFrame:Show()
+	ObjectiveTrackerFrame.Show = nil
+        ObjectiveTrackerFrame:Show()
 end
 frame:SetScript("OnEvent", function(self, event, ...)
  events[event](self, ...); -- call one of the functions above
