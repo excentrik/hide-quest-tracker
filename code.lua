@@ -3,9 +3,11 @@ local frame, events = CreateFrame("Frame"), {};
 function events:PLAYER_REGEN_DISABLED(...)
  -- handle PLAYER_REGEN_DISABLED here
 	--print(WatchFrame);
---	WatchFrame:Hide()
-	ObjectiveTrackerFrame:Hide()
-        ObjectiveTrackerFrame.Show = ObjectiveTrackerFrame.Hide
+--	WatchFrame:Hide()	
+	if GetZoneText()~="Proving Grounds" then
+		ObjectiveTrackerFrame:Hide()
+	        ObjectiveTrackerFrame.Show = ObjectiveTrackerFrame.Hide
+	end
 end
 function events:PLAYER_REGEN_ENABLED(...)
  -- handle PLAYER_REGEN_ENABLED here
